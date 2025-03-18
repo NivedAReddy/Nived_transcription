@@ -1,0 +1,126 @@
+/* Color Variables */
+:root {
+  --background-color: #F0F8FF;
+  --primary-accent: #8ABCE1;
+  --accent-color: #FF6B6B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Main Content Area (shifted right to accommodate sidebar) */
+.main-content {
+  margin-left: 300px;
+  padding: 40px;
+}
+
+/* Export Container */
+.export-container {
+  background-color: #fff;
+  border: 2px solid var(--primary-accent);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.export-container h1 {
+  font-family: 'Aboreto', cursive;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Export Content: two-column layout */
+.export-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Files List (left side) */
+.files-list {
+  flex: 1;
+  border: 2px dashed var(--primary-accent);
+  border-radius: 12px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.files-list h2 {
+  font-family: 'Aboreto', cursive;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.files-list ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.files-list li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Export Settings (right side) */
+.export-settings {
+  flex: 1;
+  border: 2px solid var(--primary-accent);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.export-settings h2 {
+  font-family: 'Aboreto', cursive;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.export-settings label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.export-settings select,
+.export-settings input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--primary-accent);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.export-settings button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.export-settings button:hover {
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: #fff;
+}
+

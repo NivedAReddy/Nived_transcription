@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export - Transcryption</title>
+  <!-- Google Fonts: Poppins for body text & Aboreto for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Aboreto&display=swap" rel="stylesheet">
+  <!-- Main CSS for export page -->
+  <link rel="stylesheet" href="style-export.css">
+  <!-- Sidebar CSS -->
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <!-- Sidebar Container: Sidebar will be injected here -->
+  <div id="sidebar-container"></div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="export-container">
+      <h1>Export Extracted Data</h1>
+      <div class="export-content">
+        <!-- Left: Processed Files List -->
+        <div class="files-list">
+          <h2>Processed Files</h2>
+          <ul id="processedFileList">
+            <!-- File items will be injected here -->
+          </ul>
+        </div>
+        <!-- Right: Export Settings -->
+        <div class="export-settings">
+          <h2>Export Settings</h2>
+          <label for="outputFormat">Output Format:</label>
+          <select id="outputFormat">
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+          </select>
+          <label for="saveLocation">Save Location:</label>
+          <input type="text" id="saveLocation" placeholder="Select save location" readonly>
+          <button id="chooseLocationBtn">Choose Location</button>
+          <button id="exportBtn">Export</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Sidebar -->
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-container').innerHTML = data;
+      })
+      .catch(err => console.error('Error loading sidebar:', err));
+  </script>
+
+  <!-- Script to list processed files (simulation) -->
+  <script>
+    function listProcessedFiles() {
+      // Simulated list of processed files.
+      // In a real implementation, these could be fetched via a pywebview API call.
+      const files = ["extracted_data1.txt", "group_output2.txt", "extracted_data3.txt"];
+      const ul = document.getElementById("processedFileList");
+      files.forEach(file => {
+        let li = document.createElement("li");
+        li.textContent = file;
+        ul.appendChild(li);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", listProcessedFiles);
+  </script>
+</body>
+</html>
+
