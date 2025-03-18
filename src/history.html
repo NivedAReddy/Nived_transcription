@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History - Transcryption</title>
+  <!-- Google Fonts: Poppins for body text & Aboreto for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Aboreto&display=swap" rel="stylesheet">
+  <!-- Sidebar CSS -->
+  <link rel="stylesheet" href="sidebar.css">
+  <!-- Main CSS for history page -->
+  <link rel="stylesheet" href="style-history.css">
+</head>
+<body>
+  <!-- Sidebar Container: Sidebar will be injected here -->
+  <div id="sidebar-container"></div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <h1>TRANSCRIPT HISTORY</h1>
+    
+    <!-- Search and Filter Row -->
+    <div class="search-filter">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search transcripts...">
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="filter-dropdown">
+        <select id="timeFilter">
+          <option value="all">All Time</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- History Items List - Simplified to just one item -->
+    <div class="history-list">
+      <!-- Single History Item -->
+      <div class="history-item">
+        <div class="item-header">
+          <h2>TRANSCRIPT 1</h2>
+          <span class="timestamp">March 12, 2025 - 4:15 PM</span>
+        </div>
+        <div class="item-content">
+          <div class="files-column">
+            <div class="file">meeting_notes.mp3</div>
+          </div>
+          <div class="stats-column">
+            <div class="stat-row">
+              <div class="stat-label">Duration:</div>
+              <div class="stat-value">32:48</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-label">Processing Time:</div>
+              <div class="stat-value">2.9 min</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-label">Words:</div>
+              <div class="stat-value">3,756</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Sidebar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading sidebar:', err));
+    });
+  </script>
+</body>
+</html>
