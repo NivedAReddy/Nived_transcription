@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Transcryption</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #AFDBF5;
+            width: 500px;
+            height: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-field {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            margin: auto;
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            background-color: #AFDBF5;
+        }
+
+        h1 {
+            font-family: monospace;
+            color: black;
+            font-size: 80pt;
+            font-weight: bold;
+        }
+        
+        h2 {
+            font-family: monospace;
+            color: black;
+            font-size: 40pt;
+            font-weight: bold;
+        }
+
+        .primary-button {
+        background-color: #4997D0;
+        color: black;
+        width: 100px;
+        height: 50px;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        }
+
+        .primary-button:hover {
+            background-color: #56b4f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            {📄}
+            <div style="font-size: 40px">
+                Transcription
+            </div>
+        </h1>
+        <div style="font-size: 20px">
+            USERNAME OR EMAIL
+        </div>
+        <input type="text" class="input-field" placeholder="Username">
+        <br>
+        <div style="font-size: 20px">
+            PASSWORD
+        </div>
+        <input type="password" class="input-field" placeholder="Password">
+        <br>
+        <button class="primary-button" onclick="window.location.href='upload.html'">
+        Login
+        </button>
+    </div>
+</body>
+</html>

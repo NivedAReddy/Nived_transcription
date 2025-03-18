@@ -1,0 +1,94 @@
+/* Sidebar Styles */
+:root {
+  --sidebar-color: #AFDBF5;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--sidebar-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.app-name {
+  font-family: 'Aboreto', cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.separator {
+  height: 2px;
+  background-color: #7FAEC9;
+  margin: 15px 0;
+}
+
+/* Navigation (top section) */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.nav a,
+.history-button {
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav a:hover,
+.history-button:hover {
+  color: #2C5989;
+  border: 2px solid #2C5989;
+  border-radius: 8px;
+  padding: 8px 15px;
+}
+
+/* History (follows immediately after nav) */
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.history-list a {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  text-align: left;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.history-list a:hover {
+  color: #2C5989;
+  border: 2px solid #2C5989;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
